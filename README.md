@@ -66,7 +66,7 @@ You will be scored on:
 - Visual walkthrough of your site and responsiveness
 - Presentation skills (confidence, clarity, visual aids)
 
-📎 [View the Presentation here]:
+📎 [View the Presentation here]: https://www.loom.com/share/59acb1aa55524bf6b90b8ca97dc6af05
 
 ## ✅ Submission Requirements
 
