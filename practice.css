@@ -1,0 +1,497 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #7b7b7b;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 6px 6px;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Subtle textured background wrapper */
+.paper-bg {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ----------------------------------------------------------
+   MAIN RESUME CONTAINER
+---------------------------------------------------------- */
+
+.resume {
+  max-width: 1318.08px; /* exact Figma width */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 20px 22px;
+}
+
+/* Standard white card style */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ----------------------------------------------------------
+   PROFILE SECTION
+---------------------------------------------------------- */
+
+.profile-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 300.1px) 1fr;
+  gap: 23.29px;
+}
+
+.profile-pic {
+  width: min(300.1px, 28vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  min-height: min(300.1px, 32vw);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+}
+
+.bio {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4a4a4a;
+  margin: 0;
+  max-width: 520px;
+}
+
+/* ----------------------------------------------------------
+   PROFICIENCY + SKILLS GRID
+---------------------------------------------------------- */
+
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.section-title {
+  font-size: 33.88px;
+  margin: 0 0 14px 0;
+  font-weight: 800;
+}
+
+/* --- Proficiency --- */
+
+.proficiency {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.pro-labels {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.pro-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pro-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pro-name {
+  font-size: 19.36px;
+  font-weight: 700;
+}
+
+.pro-bar {
+  height: 6px;
+  background: #e6ece8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.pro-bar span {
+  display: block;
+  height: 100%;
+  background: #3d8d75;
+}
+
+/* --- Skills --- */
+
+.skills {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.tag {
+  background: #ecf4f1;
+  border: 1px solid #cfe8d9;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3d8d75;
+}
+
+/* ----------------------------------------------------------
+   PROJECTS SECTION 
+---------------------------------------------------------- */
+
+.projects {
+  background: #ffffff; /* white background */
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 33.88px;
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* All project cards default to mint green*/
+.project {
+  background: #ecf4f1 !important;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 360px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+  position: relative;
+  color: black;
+}
+
+/* First project = dark green */
+.project.featured {
+  background: #3d8d75 !important;
+  color: white !important;
+}
+
+.project.featured * {
+  color: white !important;
+}
+
+.project .proj-year {
+  font-size: 24.2px;
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------------
+   EDUCATION + TOOLS (BOTTOM GRID)
+---------------------------------------------------------- */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 300px);
+  gap: 18px;
+}
+
+.edu-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* Dark-green featured education box */
+.edu-feature {
+  background: #3d8d75;
+  color: white;
+}
+
+.edu-feature * {
+  color: white !important;
+}
+
+/* Mint education boxes */
+.education .edu-item:not(.edu-feature) {
+  background: #ecf4f1;
+  border: 1px solid #cfe8d9;
+}
+
+.education .edu-item:not(.edu-feature) * {
+  color: black !important;
+}
+
+.edu-left {
+  min-width: 260px;
+}
+
+.edu-year,
+.edu-institution,
+.edu-sub {
+  font-size: 19.36px;
+  font-weight: 700;
+}
+
+.edu-bullets {
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4a4a4a;
+}
+
+/* ----------------------------------------------------------
+   TOOLS SECTION
+---------------------------------------------------------- */
+
+.tools .tool-block {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tool-label {
+  background: #111;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.tools .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.tools img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ----------------------------------------------------------
+   EXPERIENCE SECTION
+---------------------------------------------------------- */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: minmax(180px, 320px) 1fr;
+  gap: 20px;
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Left side */
+.exp-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Right side */
+.exp-right {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+
+/* Featured = dark green */
+.exp-featured {
+  background: #3d8d75;
+  border-color: #3d8d75;
+  color: white;
+}
+
+.exp-featured * {
+  color: white !important;
+}
+
+.exp-badge {
+  background: #d86a45;
+  color: white !important;
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-weight: 700;
+  margin-top: 6px;
+  width: fit-content;
+}
+
+/* Normal experience = mint */
+.exp-normal {
+  background: #ecf4f1;
+  border: 1px solid #cfe8d9;
+}
+
+.exp-normal * {
+  color: black !important;
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+---------------------------------------------------------- */
+
+.contact {
+  background: #d86a45;
+  color: white;
+  padding: 18px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE DESIGN
+---------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 240px);
+  }
+  .bottom-grid {
+    grid-template-columns: 1fr 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .resume {
+    padding: 12px;
+  }
+  .profile-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .profile-pic {
+    width: 144px;
+    height: 144px;
+  }
+  .profile-info {
+    width: 100%;
+    padding: 18px;
+  }
+  .top-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .tools .icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-pic {
+    width: 96px;
+    height: 96px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .bio {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .proj-name,
+  .proj-brief,
+  .proj-tech,
+  .proj-resp {
+    font-size: 16px;
+  }
+  .tag {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+/* FIX HEART ICON */
+.project .heart,
+.project.featured .heart {
+  color: #d9534f !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
